@@ -1,3 +1,11 @@
 ## Bitcoin Sentiment Analysis
 
-This project is for a senior level computer science course at MSOE. The project surrounds.
+This project is for a senior level computer science course at MSOE. The project scrapes tweets that contain the '#Bitcoin' with at least 10 likes, cleans the data, vectorizes it, and categorizes it based on KMeans clustering. In this way, we can manually look at the different clusters to find ones that most accurately depict positive and negative sentiment in the market.
+
+### Running a pre-trained model
+
+Open up evaluate_data.ipynb and run the first 3 cells. This will load in needed python packages, define the sentiment decision function, and import the model. The model is just a dictionary of words with their values being either 0, -1, or 1 representing positive, negative, and neutral sentiment. 
+
+Running the fourth cell will loop through each of the tweets, calculate whether it is a positive, negative, or neutral sentiment, and then plot a pie graph showing the general population of those tweets among all tweets with #Bitcoin.
+
+Running the fifth cell will define a wordcloud function. The sixth cell shows all the words in the vocabulary in a wordcloud (by popularity) and the final cell does that for a given class (0, 1, -1).
